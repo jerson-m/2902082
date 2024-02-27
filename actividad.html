@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad</title>
+    <style>
+        .color{background-color: rgba(180, 188, 236, 0.902); border-radius: 6px;}
+        .margen{padding-left: 37%;}
+        .logo{padding-left: 43%;}
+        .borde{border: none;}
+        section{margin-top: 2%; width: 20%; height: 20%;}
+        .boton{margin-top: 2%; margin-left: 80%;}
+    </style>
+</head>
+<body>
+    <header>
+        
+    <nav class="navbar navbar-light bg-light logo">
+        <a class="navbar-brand" href="">
+            <img src="https://c0.klipartz.com/pngpicture/171/923/gratis-png-departamento-de-matematica-computacion-iconos-computacion-matematica.png"
+             width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            Ejercios matematicos
+        </a>
+  </nav>
+
+    </header>
+    <nav class="color margen">
+    <div class="btn-group">
+        <button class="btn dropdown-toggle borde" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          Operadores
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><button><a class="dropdown-item border" id="b">Area triangulo</a></li></button>
+          <li><a class="dropdown-item" href="#">Suma dos numeros</a></li>
+          <li><a class="dropdown-item" href="#">Elevar al cuadrado</a></li>
+        </ul>
+      </div>
+      
+      <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle borde" data-bs-toggle="dropdown" aria-expanded="false">
+          Condicionales
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+      
+      <div class="btn-group">
+        <button type="button" class="btn dropdown-toggle borde" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+          Ciclos
+        </button>
+        <ul class="dropdown-menu dropdown-menu-lg-end">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+      
+      <div class="btn-group">
+        <button type="button" class="btn  dropdown-toggle borde" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+          Arreglos
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+          <li><a class="dropdown-item" href="#">Menu item</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <section style="margin-left: 40%;">
+        <form class="d-none" id="f">
+            <h1>Area del triangulo</h1>
+            <div class="form-group">
+              <label for="base">Digite la base del triangulo:</label>
+              <input type="number" class="form-control" id="base" aria-describedby="base" placeholder="Base" min="1">
+            </div>
+            <div class="form-group">
+              <label for="altura">Digite la altura del traingulo:</label>
+              <input type="number" class="form-control" id="altura" placeholder="Altura" min="1">
+            </div>
+            <button type="submit" class="btn btn-primary boton"  onclick="area()">Calcular</button>
+          </form>
+     </section> 
+    </main>
+   <footer>
+
+</footer>
+<script>
+    let bt=document.querySelector("#b");
+    let fr=document.querySelector("#f"); 
+    bt.addEventListener("click",m);
+    
+    function m(){
+        if(fr.classList.contains("d-none")){
+
+            fr.classList.remove("d-none");
+            
+        }
+        
+
+    }
+
+   
+
+    function area(){
+    b=parseInt(document.getElementById("base").value);
+    a=parseInt(document.getElementById("altura").value);
+    r=b*a/2;
+    alert("Su resultado es: "+ r);
+    }
+
+   
+
+</script> 
+    
+</body>
+
+
+
+
+</html>
