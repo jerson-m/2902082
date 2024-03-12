@@ -33,9 +33,9 @@
           Operadores
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li><button><a class="dropdown-item border" id="b">Area triangulo</a></li></button>
-          <li><a class="dropdown-item" href="#">Suma dos numeros</a></li>
-          <li><a class="dropdown-item" href="#">Elevar al cuadrado</a></li>
+          <li><button onclick="view('f')" class="dropdown-item border">Area triangulo</button></li>
+          <li><button onclick="view('s')" class="dropdown-item" >Suma dos numeros</button></li>
+          <li><button onclick="view()" class="dropdown-item" >Elevar al cuadrado</button></li>
         </ul>
       </div>
       
@@ -86,41 +86,44 @@
             </div>
             <button type="submit" class="btn btn-primary boton"  onclick="area()">Calcular</button>
           </form>
+     </section>
+
+     <section style="margin-left: 40%;">
+      <form class="d-none" id="s">
+        <h1>Sumar 2 numeros</h1>
+        <div class="form-group">
+          <label for="n1">Digite el primer numero:</label>
+          <input type="number" class="form-control" id="n1" aria-describedby="base" placeholder="numero 1">
+        </div>
+        <div class="form-group">
+          <label for="altura">Digite el segundo numero:</label>
+          <input type="number" class="form-control" id="n2" placeholder="numero 2">
+        </div>
+        <button type="submit" class="btn btn-primary boton"  onclick="suma()">Sumar</button>
+      </form>
+     </section> 
+
+     <section style="margin-left: 40%;">
+      <form class="d-none" id="e">
+        <h1>Elevar un numero al cuadrado</h1>
+        <div class="form-group">
+          <label for="n1">Digite el numero:</label>
+          <input type="number" class="form-control" id="n1" aria-describedby="base" placeholder="numero 1">
+        </div>
+        <div class="form-group">
+          <label for="altura">Digite el segundo numero:</label>
+          <input type="number" class="form-control" id="n2" placeholder="numero 2">
+        </div>
+        <button type="submit" class="btn btn-primary boton"  onclick="suma()">Sumar</button>
+      </form>
      </section> 
     </main>
    <footer>
 
 </footer>
-<script>
-    let bt=document.querySelector("#b");
-    let fr=document.querySelector("#f"); 
-    bt.addEventListener("click",m);
-    
-    function m(){
-        if(fr.classList.contains("d-none")){
 
-            fr.classList.remove("d-none");
-            
-        }
-        
-
-    }
-
-   
-
-    function area(){
-    b=parseInt(document.getElementById("base").value);
-    a=parseInt(document.getElementById("altura").value);
-    r=b*a/2;
-    alert("Su resultado es: "+ r);
-    }
-
-   
-
-</script> 
-    
 </body>
-
+<script src="logica.js"></script>
 
 
 
